@@ -48,9 +48,13 @@
     margin-left: auto;
 
     a {
-      color: var(--text1);
+      color: var(--text2);
       text-decoration: none;
       padding: 0.5rem;
+
+      &:hover {
+        color: var(--text1);
+      }
     }
   }
 
@@ -77,4 +81,17 @@
     }
   }
 
+  &__theme-toggle-button {
+    background-color: var(--surface2);
+    color: var(--text2);
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+
+    &:hover {
+      color: var(--text1);
+    }
+  }
 }

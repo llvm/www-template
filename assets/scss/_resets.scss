@@ -1,0 +1,20 @@
+*,
+*::before
+*::after {
+    box-sizing: border-box;
+}
+
+// remove default spacing
+* {
+  margin: 0;
+  padding: 0;
+}
+
+// responsive images & videos
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}

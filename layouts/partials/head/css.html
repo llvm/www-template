@@ -1,4 +1,4 @@
-{{- with resources.Get "css/main.css" }}
+{{- with resources.Get "scss/main.scss" | resources.ToCSS | resources.PostCSS | resources.Minify | resources.Fingerprint }}
   {{- if eq hugo.Environment "development" }}
     <link rel="stylesheet" href="{{ .RelPermalink }}">
   {{- else }}

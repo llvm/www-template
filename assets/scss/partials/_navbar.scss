@@ -1,5 +1,6 @@
 .navbar {
   background-color: var(--surface2);
+  border-bottom: 1px solid var(--text2);
 
   &__container {
     display: flex;
@@ -33,6 +34,7 @@
     display: none;
     font-size: 2rem;
     cursor: pointer;
+    margin-left: auto;
   }
 
   &__menu {
@@ -43,6 +45,7 @@
     margin: 0;
     padding: 0;
     gap: 0.25rem;
+    margin-left: auto;
 
     a {
       color: var(--text1);
@@ -73,4 +76,5 @@
       transform: translateY(0);
     }
   }
+
 }

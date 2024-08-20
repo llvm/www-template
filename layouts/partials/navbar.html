@@ -1,0 +1,24 @@
+{{/*  <h1>{{ site.Title }}</h1>
+{{ partial "menu.html" (dict "menuID" "main" "page" .) }}  */}}
+
+
+{{/*  TODO: add hamburger functionality  */}}
+<nav class="navbar">
+    <div class="navbar__container">
+        <a href="{{.Site.Home.Permalink}}">
+            <div class="navbar__logo">
+                <img src="{{ "images/logo.png" | relURL }}" alt="logo">
+            </div>
+        </a>
+        <div class="navbar__toggle" id="navbarToggle">
+            &#9776; <!-- Unicode character for hamburger icon -->
+        </div>
+        <ul class="navbar__menu" id="navbarMenu">
+            <li><a href="{{ "/" | relURL }}">Getting Started</a></li>
+            <li><a href="{{ "/about" | relURL }}">Docs</a></li>
+            <li><a href="{{ "/contact" | relURL }}">Blogs</a></li>
+            <li><a href="{{ "/contact" | relURL }}">Resources</a></li>
+            <li><a href="{{ "/contact" | relURL }}">Downloads</a></li>
+        </ul>
+    </div>
+</nav>

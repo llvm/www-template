@@ -10,6 +10,14 @@
   padding: 0;
 }
 
+/*
+  Remove list styles (bullets/numbers)
+  in case you use it with normalize.css
+*/
+ol, ul {
+  list-style: none;
+}
+
 // responsive images & videos
 img,
 picture,

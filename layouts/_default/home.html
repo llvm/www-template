@@ -1,34 +1,37 @@
-{{ define "main" }}
-  {{/*  {{ .Content }}
-  {{ range site.RegularPages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
-  {{ end }}  */}}
-  
-  <section class="hero section-container">
-    <div class="hero__container">
-      <div class="hero__content">
-        <h1 class="hero__title">
-          <span class="hero__title-large">The LLVM</span><br/>
-          Compiler Infrastructure
-        </h1>
-        <p class="hero__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus leo eget tempor faucibus. Nunc vitae elit at enim ultrices hendrerit eu at risus.</p>
-        <div class="hero__cta">
-          <a href="#" class="hero__button hero__button--primary">Get Started</a>
-          <a href="#" class="hero__button hero__button--secondary">Releases</a>
-        </div>
-      </div>
+{{ define "main" }} {{/* {{ .Content }} {{ range site.RegularPages }}
+<h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+{{ .Summary }} {{ end }} */}}
 
-      <div class="hero__image">
-        <img src="{{ "images/logo.png" | relURL }}" alt="hero">
+<div class="home">
+<section class="hero section-container">
+  <div class="hero__container">
+    <div class="hero__content">
+      <h1 class="hero__title">
+        <span class="hero__title-large">The LLVM</span><br />
+        Compiler Infrastructure
+      </h1>
+      <p class="hero__subtitle">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus
+        leo eget tempor faucibus. Nunc vitae elit at enim ultrices hendrerit eu
+        at risus.
+      </p>
+      <div class="hero__cta">
+        <a href="#" class="hero__button hero__button--primary">Get Started</a>
+        <a href="#" class="hero__button hero__button--secondary">Releases</a>
       </div>
     </div>
-  </section>
 
-  <section class="section-container">
-    <h2>What is LLVM?</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus
-    leo eget tempor faucibus. Nunc vitae elit at enim ultrices hendrerit eu at
+    <div class="hero__image">
+      <img src="{{ "images/logo.png" | relURL }}" alt="hero">
+    </div>
+  </div>
+</section>
+
+<section class="section-container">
+  <h2>What is LLVM?</h2>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus leo
+    eget tempor faucibus. Nunc vitae elit at enim ultrices hendrerit eu at
     risus. Cras suscipit, lorem eu varius mattis, libero nulla blandit neque, ac
     varius augue quam sit amet diam. Proin semper magna diam, non consectetur
     eros pharetra vel. Nunc ut placerat sem, in iaculis ante. Curabitur viverra
@@ -37,14 +40,15 @@
     Sed pulvinar nunc tellus, a condimentum ante ullamcorper ac. Vivamus sit
     amet interdum ante. Donec tempus id sem ac ullamcorper. Curabitur tincidunt
     imperdiet sem, non sagittis ligula iaculis efficitur. Proin vitae metus
-    ullamcorper, pulvinar diam et, sodales nisi. Sed fringilla pretium
-    ornare.</p>
-  </section>
+    ullamcorper, pulvinar diam et, sodales nisi. Sed fringilla pretium ornare.
+  </p>
+</section>
 
-  <section class="section-container">
-    <h2>Getting Involved</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus
-    leo eget tempor faucibus. Nunc vitae elit at enim ultrices hendrerit eu at
+<section class="section-container">
+  <h2>Getting Involved</h2>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus leo
+    eget tempor faucibus. Nunc vitae elit at enim ultrices hendrerit eu at
     risus. Cras suscipit, lorem eu varius mattis, libero nulla blandit neque, ac
     varius augue quam sit amet diam. Proin semper magna diam, non consectetur
     eros pharetra vel. Nunc ut placerat sem, in iaculis ante. Curabitur viverra
@@ -53,24 +57,37 @@
     Sed pulvinar nunc tellus, a condimentum ante ullamcorper ac. Vivamus sit
     amet interdum ante. Donec tempus id sem ac ullamcorper. Curabitur tincidunt
     imperdiet sem, non sagittis ligula iaculis efficitur. Proin vitae metus
-    ullamcorper, pulvinar diam et, sodales nisi. Sed fringilla pretium
-    ornare.</p>
-  </section>
+    ullamcorper, pulvinar diam et, sodales nisi. Sed fringilla pretium ornare.
+  </p>
+</section>
 
-  <section class="section-container">
+<div class="home__row section-container">
+  <section class="">
     <h2>Developer Resources</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus
-    leo eget tempor faucibus. Nunc vitae elit at enim ultrices hendrerit eu at
-    risus. Cras suscipit, lorem eu varius mattis, libero nulla blandit neque, ac
-    varius augue quam sit amet diam. Proin semper magna diam, non consectetur
-    eros pharetra vel. Nunc ut placerat sem, in iaculis ante. Curabitur viverra
-    tincidunt gravida. Phasellus tempor viverra mauris, vel elementum nisi
-    aliquam malesuada. Curabitur in nunc eu leo vulputate convallis at quis est.
-    Sed pulvinar nunc tellus, a condimentum ante ullamcorper ac. Vivamus sit
-    amet interdum ante. Donec tempus id sem ac ullamcorper. Curabitur tincidunt
-    imperdiet sem, non sagittis ligula iaculis efficitur. Proin vitae metus
-    ullamcorper, pulvinar diam et, sodales nisi. Sed fringilla pretium
-    ornare.</p>
+    <p>
+      <ul>
+        <li><a href="/">Doxygen</a></li>
+        <li><a href="/">Sources (GitHub)</a></li>
+        <li><a href="/">Code Review</a></li>
+        <li><a href="/">Bug Tracker</a></li>
+        <li><a href="/">Green Dragon</a></li>
+        <li><a href="/">LNT</a></li>
+        <li><a href="/">Scan Build</a></li>
+        <li><a href="/">llvm-cov</a></li>
+        <li><a href="/">Compile-time tracker</a></li>
+      </ul>
+    </p>
   </section>
+
+  <section class="">
+    <h2>Upcoming events</h2>
+    <p>
+      <ul>
+        <li><a href="/">April 9-11, 2024 - EuroLLVM Dev Mtg</a></li>
+      </ul>
+    </p>
+  </section>
+</div>
+</div>
 
 {{ end }}

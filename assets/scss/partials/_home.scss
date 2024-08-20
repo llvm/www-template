@@ -134,3 +134,28 @@
     }
   }
 }
+
+.home {
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  ul {
+    list-style: circle;
+    line-height: 1.5rem;
+    padding-left: 2rem;
+    a {
+      text-decoration: none;
+      color: var(--text2);
+      &:visited {
+        color: var(--text2);
+      }
+
+      &:hover {
+        color: var(--text1);
+      }
+    }
+  }
+}

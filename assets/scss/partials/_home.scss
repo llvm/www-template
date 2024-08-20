@@ -1,0 +1,136 @@
+.hero {
+  &__container {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    @media (max-width: 768px) {
+      //   flex-direction: column;
+    }
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+
+    &-large {
+      font-size: 3rem;
+
+      @media (max-width: 768px) {
+        font-size: 2.5rem;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1.75rem;
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.25rem;
+    font-weight: 500;
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 0.875rem;
+    }
+  }
+
+  &__image {
+    // width: 70%;
+    height: auto;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+      display: none;
+    }
+  }
+
+  &__cta {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+
+    @media (max-width: 480px) {
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+    }
+  }
+
+  &__button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+
+    @media (max-width: 768px) {
+      width: 100%;
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    &--primary {
+      background-color: var(--brand);
+      color: var(--text1);
+    }
+
+    &--secondary {
+      background-color: var(--surface1);
+      color: var(--text1);
+      border: 1px solid var(--text1);
+    }
+  }
+}
+
+.section-container {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 1rem 2rem;
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--brand);
+
+    @media (max-width: 768px) {
+      font-size: 1.25rem;
+    }
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.5;
+
+    @media (max-width: 768px) {
+      font-size: 0.875rem;
+    }
+  }
+}

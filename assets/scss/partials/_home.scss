@@ -83,7 +83,7 @@
     text-decoration: none;
     font-size: 1.25rem;
     cursor: pointer;
-    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
 
     @media (max-width: 768px) {
       width: 100%;
@@ -93,7 +93,7 @@
 
     &--primary {
       background-color: var(--brand);
-      color: var(--text1);
+      color: var(--text1-inverse);
     }
 
     &--secondary {
@@ -163,7 +163,7 @@
 .sub-projects-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 2rem;
+  gap: 1rem;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr 1fr;
@@ -230,6 +230,33 @@
 
     &__title {
       font-size: 1rem;
+    }
+  }
+}
+
+.getting-involved {
+  &__wrapper {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .socials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+    &__link {
+      text-decoration: none;
+      color: var(--text1);
+      font-size: 3rem;
+      color: var(--text2);
+      opacity: 0.75;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: var(--text1);
+        opacity: 1;
+      }
     }
   }
 }

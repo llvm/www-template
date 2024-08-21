@@ -19,6 +19,8 @@
   --brand: var(--brand-light);
   --text1: var(--text1-light);
   --text2: var(--text2-light);
+  --text1-inverse: var(--text1-dark);
+  --text2-inverse: var(--text2-dark);
   --surface1: var(--surface1-light);
   --surface2: var(--surface2-light);
   //   --surface-shadow: var(--surface-shadow-light);
@@ -33,6 +35,8 @@
     --brand: var(--brand-dark);
     --text1: var(--text1-dark);
     --text2: var(--text2-dark);
+    --text1-inverse: var(--text1-light);
+    --text2-inverse: var(--text2-light);
     --surface1: var(--surface1-dark);
     --surface2: var(--surface2-dark);
   }
@@ -44,6 +48,8 @@
   --brand: var(--brand-light);
   --text1: var(--text1-light);
   --text2: var(--text2-light);
+  --text1-inverse: var(--text1-dark);
+  --text2-inverse: var(--text2-dark);
   --surface1: var(--surface1-light);
   --surface2: var(--surface2-light);
 }
@@ -54,6 +60,8 @@
   --brand: var(--brand-dark);
   --text1: var(--text1-dark);
   --text2: var(--text2-dark);
+  --text1-inverse: var(--text1-dark);
+  --text2-inverse: var(--text2-dark);
   --surface1: var(--surface1-dark);
   --surface2: var(--surface2-dark);
 }

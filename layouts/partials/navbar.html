@@ -1,9 +1,5 @@
-{{/*  <h1>{{ site.Title }}</h1>
-{{ partial "menu.html" (dict "menuID" "main" "page" .) }}  */}}
-
-
-{{/*  TODO: add hamburger functionality  */}}
 <nav class="navbar">
+    <span id="nav-label" hidden>Navigation</span>
     <div class="navbar__container">
         <a href="{{.Site.Home.Permalink}}">
             <div class="navbar__logo">
@@ -11,23 +7,46 @@
             </div>
         </a>
 
-        <button class="navbar__toggle" id="navbarToggle">
+        <button id="navbarToggle" class="navbar__toggle" aria-expanded="false" aria-labelledby="nav-label">
             <i class="ri-menu-line"></i>
         </button>
 
-        <ul class="navbar__menu" id="navbarMenu">
-            <li><a href="{{ "/" | relURL }}">Getting Started</a></li>
-            <li><a href="{{ "/" | relURL }}">Docs</a></li>
-            <li><a href="{{ "/" | relURL }}">Blogs</a></li>
-            <li><a href="{{ "/" | relURL }}">Resources</a></li>
-            <li><a href="{{ "/" | relURL }}">Downloads</a></li>
-        </ul>
+        <div class="navbar__menu" role="dialog" aria-labelledby="nav-label">
+            <button class="navbar__close" id="navbarClose" aria-label="Close">
+                <i class="ri-close-line"></i>
+            </button>
+            <ul class="navbar__links">
+                <li class="navbar__item"><a href="{{ "/" | relURL }}" class="navbar__link">Getting Started</a></li>
+                <li class="navbar__item"><a href="{{ "/" | relURL }}" class="navbar__link">Docs</a></li>
+                <li class="navbar__item"><a href="{{ "/" | relURL }}" class="navbar__link">Blogs</a></li>
+                <li class="navbar__item"><a href="{{ "/" | relURL }}" class="navbar__link">Resources</a></li>
+                <li class="navbar__item"><a href="{{ "/" | relURL }}" class="navbar__link">Downloads</a></li>
+            </ul>
+        </div>
 
         <button class="navbar__theme-toggle-button" id="themeSwitcher">
-            {{/*  TODO: toggle between sun & moon icons  */}}
             <i class="ri-sun-line"></i>
-            {{/*  <i class="ri-moon-line"></i>  */}}
         </button>
-
     </div>
 </nav>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const navbarToggle = document.getElementById("navbarToggle");
+  const navbarClose = document.getElementById("navbarClose");
+  const navbarMenu = document.querySelector(".navbar__menu");
+
+  navbarToggle.addEventListener("click", function () {
+    const expanded =
+      navbarToggle.getAttribute("aria-expanded") === "true" || false;
+    navbarToggle.setAttribute("aria-expanded", !expanded);
+    navbarMenu.classList.toggle("active");
+  });
+
+  navbarClose.addEventListener("click", function () {
+    navbarToggle.setAttribute("aria-expanded", false);
+    navbarMenu.classList.remove("active");
+  });
+});
+
+</script>

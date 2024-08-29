@@ -16,11 +16,14 @@
                 <i class="ri-close-line"></i>
             </button>
             <ul class="navbar__links">
-                <li class="navbar__item"><a href="{{ "/" | relURL }}" class="navbar__link">Getting Started</a></li>
+                {{/*  <li class="navbar__item"><a href="{{ "/" | relURL }}" class="navbar__link">Getting Started</a></li>
                 <li class="navbar__item"><a href="{{ "/" | relURL }}" class="navbar__link">Docs</a></li>
                 <li class="navbar__item"><a href="{{ "/" | relURL }}" class="navbar__link">Blogs</a></li>
                 <li class="navbar__item"><a href="{{ "/" | relURL }}" class="navbar__link">Resources</a></li>
-                <li class="navbar__item"><a href="{{ "/" | relURL }}" class="navbar__link">Downloads</a></li>
+                <li class="navbar__item"><a href="{{ "/" | relURL }}" class="navbar__link">Downloads</a></li>  */}}
+                {{ range .Site.Menus.main }}
+                    <li class="navbar__item"><a href="{{ .URL | relURL }}" class="navbar__link">{{ .Name }}</a></li>
+                {{ end }}
             </ul>
         </div>
 

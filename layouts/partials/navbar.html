@@ -10,9 +10,11 @@
                 <img src="{{ "images/logo.png" | relURL }}" alt="logo">
             </div>
         </a>
-        <div class="navbar__toggle" id="navbarToggle">
-            &#9776; <!-- Unicode character for hamburger icon -->
-        </div>
+
+        <button class="navbar__toggle" id="navbarToggle">
+            <i class="ri-menu-line"></i>
+        </button>
+
         <ul class="navbar__menu" id="navbarMenu">
             <li><a href="{{ "/" | relURL }}">Getting Started</a></li>
             <li><a href="{{ "/" | relURL }}">Docs</a></li>
@@ -20,10 +22,12 @@
             <li><a href="{{ "/" | relURL }}">Resources</a></li>
             <li><a href="{{ "/" | relURL }}">Downloads</a></li>
         </ul>
+
         <button class="navbar__theme-toggle-button" id="themeSwitcher">
             {{/*  TODO: toggle between sun & moon icons  */}}
             <i class="ri-sun-line"></i>
             {{/*  <i class="ri-moon-line"></i>  */}}
         </button>
+
     </div>
 </nav>

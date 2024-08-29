@@ -32,9 +32,18 @@
 
   &__toggle {
     display: none;
-    font-size: 2rem;
+    background: none;
+    color: var(--text2);
+    border: none;
     cursor: pointer;
+    font-size: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
     margin-left: auto;
+
+    &:hover {
+      color: var(--text1);
+    }
   }
 
   &__menu {
@@ -82,7 +91,7 @@
   }
 
   &__theme-toggle-button {
-    background-color: var(--surface2);
+    background: none;
     color: var(--text2);
     border: none;
     cursor: pointer;

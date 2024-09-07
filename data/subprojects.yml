@@ -1,0 +1,25 @@
+subprojects:
+  - name: "LLVM Core"
+    description: "
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus
+      leo eget tempor faucibus. Nunc vitae elit at enim ultrices hendrerit eu
+      "
+    url: "https://example.org/project-alpha"
+  - name: "Clang"
+    description: "
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus
+      leo eget tempor faucibus. Nunc vitae elit at enim ultrices hendrerit eu
+      "
+    url: "https://example.org/project-beta"
+  - name: "LLDB"
+    description: "
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus
+      leo eget tempor faucibus. Nunc vitae elit at enim ultrices hendrerit eu
+      "
+    url: "https://example.org/project-gamma"
+  - name: "libc++"
+    description: "
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus
+      leo eget tempor faucibus. Nunc vitae elit at enim ultrices hendrerit eu
+      "
+    url: "https://example.org/project-delta"

@@ -1,0 +1,6 @@
+upcoming_events:
+  - name: "EuroLLVM Dev Mtg"
+    start_date: "2024-04-09"
+    end_date: "2024-04-11"
+    description: "EuroLLVM Developers Meeting"
+    location: "Europe"

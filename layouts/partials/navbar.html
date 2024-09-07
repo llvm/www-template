@@ -1,55 +1,57 @@
 <nav class="navbar">
-    <span id="nav-label" hidden>Navigation</span>
-    <div class="navbar__container">
-        <a href="{{.Site.Home.Permalink}}">
-            <div class="navbar__logo">
-                <img src="{{ "images/logo.png" | relURL }}" alt="logo">
-            </div>
-        </a>
+  <span id="nav-label" hidden>Navigation</span>
+  <div class="navbar__container">
+    <a href="{{.Site.Home.Permalink}}">
+      <div class="navbar__logo">
+        <img src="{{ "images/logo.png" | relURL }}" alt="logo">
+      </div>
+    </a>
 
-        <button id="navbarToggle" class="navbar__toggle" aria-expanded="false" aria-labelledby="nav-label">
-            <i class="ri-menu-line"></i>
-        </button>
+    <button
+      id="navbarToggle"
+      class="navbar__toggle"
+      aria-expanded="false"
+      aria-labelledby="nav-label"
+    >
+      <i class="ri-menu-line"></i>
+    </button>
 
-        <div class="navbar__menu" role="dialog" aria-labelledby="nav-label">
-            <button class="navbar__close" id="navbarClose" aria-label="Close">
-                <i class="ri-close-line"></i>
-            </button>
-            <ul class="navbar__links">
-                {{/*  <li class="navbar__item"><a href="{{ "/" | relURL }}" class="navbar__link">Getting Started</a></li>
-                <li class="navbar__item"><a href="{{ "/" | relURL }}" class="navbar__link">Docs</a></li>
-                <li class="navbar__item"><a href="{{ "/" | relURL }}" class="navbar__link">Blogs</a></li>
-                <li class="navbar__item"><a href="{{ "/" | relURL }}" class="navbar__link">Resources</a></li>
-                <li class="navbar__item"><a href="{{ "/" | relURL }}" class="navbar__link">Downloads</a></li>  */}}
-                {{ range .Site.Menus.main }}
-                    <li class="navbar__item"><a href="{{ .URL | relURL }}" class="navbar__link">{{ .Name }}</a></li>
-                {{ end }}
-            </ul>
-        </div>
+    <div class="navbar__menu" role="dialog" aria-labelledby="nav-label">
+      <button class="navbar__close" id="navbarClose" aria-label="Close">
+        <i class="ri-close-line"></i>
+      </button>
 
-        <button class="navbar__theme-toggle-button" id="themeSwitcher">
-            <i class="ri-sun-line"></i>
-        </button>
+      <ul class="navbar__links">
+        {{ range .Site.Menus.main }}
+        <li class="navbar__item">
+          <a href="{{ .URL | relURL }}" class="navbar__link">{{ .Name }}</a>
+        </li>
+        {{ end }}
+      </ul>
     </div>
+
+    <button class="navbar__theme-toggle-button" id="themeSwitcher">
+      <i class="ri-sun-line"></i>
+    </button>
+  </div>
 </nav>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const navbarToggle = document.getElementById("navbarToggle");
-  const navbarClose = document.getElementById("navbarClose");
-  const navbarMenu = document.querySelector(".navbar__menu");
+  document.addEventListener("DOMContentLoaded", function () {
+    const navbarToggle = document.getElementById("navbarToggle");
+    const navbarClose = document.getElementById("navbarClose");
+    const navbarMenu = document.querySelector(".navbar__menu");
 
-  navbarToggle.addEventListener("click", function () {
-    const expanded =
-      navbarToggle.getAttribute("aria-expanded") === "true" || false;
-    navbarToggle.setAttribute("aria-expanded", !expanded);
-    navbarMenu.classList.toggle("active");
+    navbarToggle.addEventListener("click", function () {
+      const expanded =
+        navbarToggle.getAttribute("aria-expanded") === "true" || false;
+      navbarToggle.setAttribute("aria-expanded", !expanded);
+      navbarMenu.classList.toggle("active");
+    });
+
+    navbarClose.addEventListener("click", function () {
+      navbarToggle.setAttribute("aria-expanded", false);
+      navbarMenu.classList.remove("active");
+    });
   });
-
-  navbarClose.addEventListener("click", function () {
-    navbarToggle.setAttribute("aria-expanded", false);
-    navbarMenu.classList.remove("active");
-  });
-});
-
 </script>

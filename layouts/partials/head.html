@@ -1,9 +1,13 @@
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
-<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+{{/* TODO: remove noindex meta before hosting on llvm.org */}}
+<meta name="robots" content="noindex" />
+<title>
+  {{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title
+  site.Title }}{{ end }}
+</title>
 <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
-    rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+  rel="stylesheet"
 />
-{{ partialCached "head/css.html" . }}
-{{ partialCached "head/js.html" . }}
+{{ partialCached "head/css.html" . }} {{ partialCached "head/js.html" . }}

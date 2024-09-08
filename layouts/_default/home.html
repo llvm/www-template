@@ -115,10 +115,10 @@
       <ul>
         {{ range $events }}
         <li>
-          <a href="/"
-            >{{ .start_date | dateFormat "January 2-11, 2006" }} - {{ .name
-            }}</a
-          >
+          <a href="{{ .url }}">
+            {{ .start_date | dateFormat "January 2" }}-{{ .end_date | dateFormat
+            "2, 2006" }} - {{ .name }}
+          </a>
         </li>
         {{ end }}
       </ul>

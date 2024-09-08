@@ -187,7 +187,12 @@
     &__description {
       font-size: 1rem;
       margin-bottom: 0.5rem;
-      max-lines: 3;
+      display: -webkit-box;
+      line-clamp: 7;
+      -webkit-line-clamp: 7;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
 
       @media (max-width: 768px) {
         font-size: 0.875rem;

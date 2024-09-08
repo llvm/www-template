@@ -230,6 +230,13 @@
     padding: 1rem;
     border: 1px solid var(--text1);
     border-radius: 0.25rem;
+    text-decoration: none;
+    color: var(--text2);
+    cursor: pointer;
+
+    &:hover {
+      color: var(--text1);
+    }
 
     &__icon {
       font-size: 2rem;

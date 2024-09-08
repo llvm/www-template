@@ -30,34 +30,14 @@
 
   <section class="section-container">
     <div class="links-wrapper">
-      <div class="link">
+      {{ range first 4 .Site.Params.hero_section_links }}
+      <a class="link" href="{{ .url }}">
         <div class="link__icon">
-          <i class="ri-hashtag"></i>
+          <i class="{{ .icon }}"></i>
         </div>
-
-        <p class="link__title">Latest Release</p>
-      </div>
-      <div class="link">
-        <div class="link__icon">
-          <i class="ri-play-large-line"></i>
-        </div>
-
-        <p class="link__title">Get Started</p>
-      </div>
-      <div class="link">
-        <div class="link__icon">
-          <i class="ri-book-open-line"></i>
-        </div>
-
-        <p class="link__title">Read the Docs</p>
-      </div>
-      <div class="link">
-        <div class="link__icon">
-          <i class="ri-projector-line"></i>
-        </div>
-
-        <p class="link__title">Explore subprojects</p>
-      </div>
+        <p class="link__title">{{ .title }}</p>
+      </a>
+      {{ end }}
     </div>
   </section>
 

@@ -31,3 +31,25 @@ weight = 50
   [module.hugoVersion]
     extended = false
     min = "0.116.0"
+
+
+# Hero section links
+
+[params]
+  # only first 4 links will be displayed
+  [[params.hero_section_links]]
+    title = "Latest Release"
+    icon = "ri-hashtag"
+    url = "/"
+  [[params.hero_section_links]]
+    title = "Get Started"
+    icon = "ri-play-large-line"
+    url = "/"
+  [[params.hero_section_links]]
+    title = "Read the Docs"
+    icon = "ri-book-open-line"
+    url = "/"
+  [[params.hero_section_links]]
+    title = "Explore subprojects"
+    icon = "ri-projector-line"
+    url = "/"

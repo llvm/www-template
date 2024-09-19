@@ -7,18 +7,16 @@
     <div class="hero__container">
       <div class="hero__content">
         <h1 class="hero__title">
-          <span class="hero__title-large">The LLVM</span><br />
-          Compiler Infrastructure
+          {{/* <span class="hero__title-large">The LLVM</span><br />
+          Compiler Infrastructure */}} {{.Site.Title}}
         </h1>
-        <p class="hero__subtitle">
-          The LLVM Project is a collection of modular and reusable compiler and
-          toolchain technologies. Despite its name, LLVM has little to do with
-          traditional virtual machines. The name "LLVM" itself is not an
-          acronym; it is the full name of the project.
-        </p>
+        <p class="hero__subtitle">{{.Site.Params.subtitle}}</p>
         <div class="hero__cta">
-          <a href="#" class="hero__button hero__button--primary">Get Started</a>
-          <a href="#" class="hero__button hero__button--secondary">Releases</a>
+          {{ range first 2 .Site.Params.hero_section_buttons}}
+          <a href="{{ .url }}" class="hero__button hero__button--{{ .type }}"
+            >{{ .title }}</a
+          >
+          {{ end }}
         </div>
       </div>
 

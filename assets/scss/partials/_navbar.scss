@@ -162,10 +162,19 @@
     z-index: 1000;
     right: 0;
 
+    @media screen and (max-width: 768px) {
+      position: absolute;
+      max-height: 500px;
+    }
+
     &-item {
       padding: 0.5rem 1rem;
       border-bottom: 1px solid var(--text2);
       text-wrap: nowrap;
+
+      &:last-child {
+        border-bottom: none;
+      }
     }
 
     &-link {
@@ -187,6 +196,13 @@
       opacity: 1;
       pointer-events: all;
       max-height: 500px;
+
+      @media screen and (max-width: 768px) {
+        max-height: 500px;
+        position: static;
+        margin-left: 2rem;
+        border: none;
+      }
     }
   }
 }

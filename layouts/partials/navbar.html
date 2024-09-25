@@ -24,7 +24,11 @@
       <ul class="navbar__links">
         {{ range .Site.Menus.main }}
         <li class="navbar__item">
+          {{ if .HasChildren }}
+          <p class="navbar__link">{{ .Name }} <i class="ri-arrow-down-s-fill"></i></p>
+          {{ else }}
           <a href="{{ .URL | relURL }}" class="navbar__link">{{ .Name }}</a>
+          {{ end }}
           {{ if .HasChildren }}
           <ul class="navbar__submenu">
             {{ range .Children }}

@@ -87,7 +87,7 @@
     text-decoration: none;
     font-size: 1.25rem;
     cursor: pointer;
-    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 0.5rem var(--shadow1);
 
     @media (max-width: 768px) {
       width: 100%;

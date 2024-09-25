@@ -59,7 +59,7 @@
     <div class="sub-projects-wrapper">
       {{ range $subprojects}}
       <div class="sub-project">
-        <h3 class="sub-project__title">{{ .name }}</h3>
+        <h4 class="sub-project__title">{{ .name }}</h4>
         <p class="sub-project__description">{{ .description }}</p>
         <a class="sub-project__button" href="{{ .url }}">Learn More</a>
       </div>
@@ -70,7 +70,7 @@
   <section class="section-container getting-involved">
     <h2>Getting Involved</h2>
     <div class="getting-involved__wrapper">
-      <p>
+      <p style="margin-top: 0">
         As much as everything else, LLVM has a broad and friendly community of
         people who are interested in building great low-level tools. If you are
         interested in getting involved, a good first place is to skim the LLVM

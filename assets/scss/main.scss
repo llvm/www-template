@@ -6,107 +6,209 @@
 
 // TODO: break down into partials for singles page
 // TODO: Add this before the partials import
+/* Basic styling for markdown elements */
+
+/* General text styles */
+// body {
+//   line-height: 1.6;
+// }
+
 main {
   min-height: 80vh;
-  max-width: 1000px;
-  padding: 1rem;
-  margin: auto;
-
+  max-width: 1024px;
+  margin: 0 auto;
+  /* Headings */
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    margin-top: 1.5rem;
-    margin-bottom: 0.875rem;
-    // color: var(--);
+    margin: 1.5rem 0 1rem;
+    font-weight: 600;
+    color: var(--brand);
   }
 
   h1 {
-    font-weight: 800;
-    margin-top: 0;
-    color: var(--brand);
+    font-size: 2rem;
+    border-bottom: 2px solid var(--text2);
+    padding-bottom: 0.5rem;
   }
 
+  h2 {
+    font-size: 1.75rem;
+    border-bottom: 1px solid var(--text2);
+    padding-bottom: 0.5rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  h5,
+  h6 {
+    font-size: 1rem;
+  }
+
+  /* Paragraphs */
+  p {
+    margin: 1rem 0;
+  }
+
+  /* Bold and italic */
+  strong {
+    font-weight: bold;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  del {
+    text-decoration: line-through;
+  }
+
+  /* Blockquotes */
+  blockquote {
+    margin: 1.5rem 0;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--surface2);
+    border-left: 5px solid #ccc;
+    border-radius: 0.25rem;
+    color: var(--text2);
+    font-style: italic;
+  }
+
+  /* Lists */
   ul,
   ol {
-    list-style: circle;
-    padding-left: 1rem;
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  li ul,
+  li ol {
+    margin-top: 0.5rem;
+  }
+
+  li ul {
+    list-style-type: circle;
+  }
+
+  li ul li ul {
+    list-style-type: square;
+  }
+
+  /* Links */
+  a {
+    color: var(--brand);
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  /* Images */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem 0;
+  }
+
+  /* Code blocks */
+  pre {
+    background-color: var(--surface2);
+    // border: 1px solid var(--text2);
+    border-radius: 0.25rem;
+    padding: 0 1rem;
+    overflow-x: auto;
+    margin: 1rem 0;
   }
 
   code {
-    background-color: var(--surface2);
-    color: var(--brand);
-    padding: 0.25rem;
-    border-radius: 0.25rem;
+    font-family: "Courier New", Courier, monospace;
+    // background-color: var(--surface2);
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
   }
 
-  pre {
-    color: var(--brand);
-    margin: 0.5rem 0;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    overflow-x: auto;
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    background-color: var(--surface1);
+    box-shadow: 0 0 10px var(--shadow1);
+  }
 
-    code {
-      background-color: transparent;
-    }
+  th,
+  td {
+    padding: 0.75rem;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+
+  th {
+    background-color: var(--surface2);
+    font-weight: bold;
+  }
+
+  dl {
+    margin: 1rem 0;
+  }
+
+  dt {
+    font-weight: bold;
+  }
+
+  dd {
+    margin-left: 1.5rem;
+  }
+
+  /* Horizontal rule */
+  hr {
+    border: none;
+    border-top: 1px solid var(--text2);
+    margin: 2rem 0;
+  }
+
+  /* Task Lists */
+  input[type="checkbox"] {
+    margin-right: 0.5rem;
+    vertical-align: middle;
+  }
+
+  /* Footnotes */
+  sup {
+    font-size: 0.75rem;
+  }
+
+  /* Emojis */
+  .emoji {
+    font-size: 1.25rem;
+    vertical-align: middle;
+  }
+
+  /* Miscellaneous */
+  .markdown-container {
+    padding: 1.5rem;
   }
 }
-
-// main {
-//   h1,
-//   h2,
-//   h3,
-//   h4,
-//   h5,
-//   h6 {
-//     background: #d4d4d4;
-//     border-top: 1px solid gray;
-//     border-bottom: 1px solid gray;
-//     font-weight: normal;
-//     padding-left: 2px;
-//     padding-right: 2px;
-//   }
-//   blockquote {
-//     background: #e6f2e6;
-//     border-left: 3px solid #408040;
-//     font-style: italic;
-//     padding-left: 5px;
-//     margin-left: 2px;
-//   }
-//   pre {
-//     background: #e0f0ff;
-//     border-left: 5px solid #55aaff;
-//     padding: 5px;
-//     margin-left: 2px;
-//   }
-//   code {
-//     background: #e0f0ff;
-//     font-family: JetBrains Mono NL, Courier New, Monospaced;
-//     font-size: 0.9em;
-//   }
-//   table {
-//     border-spacing: 0px;
-//     border-right: 1px solid gray;
-//     border-bottom: 1px solid gray;
-//   }
-//   th,
-//   td {
-//     border-left: 1px solid gray;
-//     border-top: 1px solid gray;
-//   }
-//   th {
-//     background: #d4d4d4;
-//     font-weight: 600;
-//   }
-//   ul {
-//     margin-left-ltr: 20px;
-//     margin-right-rtl: 20px;
-//   }
-//   ol {
-//     margin-left-ltr: 25px;
-//     margin-right-rtl: 25px;
-//   }
-// }

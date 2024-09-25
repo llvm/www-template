@@ -25,10 +25,20 @@
         {{ range .Site.Menus.main }}
         <li class="navbar__item">
           <a href="{{ .URL | relURL }}" class="navbar__link">{{ .Name }}</a>
+          {{ if .HasChildren }}
+          <ul class="navbar__submenu">
+            {{ range .Children }}
+            <li class="navbar__submenu-item">
+              <a href="{{ .URL | relURL }}" class="navbar__submenu-link"
+                >{{ .Name }}</a
+              >
+            </li>
+            {{ end }}
+          </ul>
+          {{ end }}
         </li>
         {{ end }}
-      </ul>
-    </div>
+      <div>
 
     <button class="navbar__theme-toggle-button" id="themeSwitcher">
       <i class="ri-sun-line"></i>

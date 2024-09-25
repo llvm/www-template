@@ -2,6 +2,7 @@ baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'The LLVM Compiler Infrastructure'
 
+# Navigation Bar Menu
 [[menus.main]]
 name = 'Getting Started'
 pageRef = '/'
@@ -21,6 +22,24 @@ weight = 30
 name = 'Resources'
 pageRef = '/resources'
 weight = 40
+
+[[menus.main]]
+name = 'Doxygen '
+pageRef = '/'
+weight = 1
+parent = 'Resources'
+
+[[menus.main]]
+name = 'GitHub'
+pageRef = '/'
+weight = 2
+parent = 'Resources'
+
+[[menus.main]]
+name = 'Code Review'
+pageRef = '/'
+weight = 3
+parent = 'Resources'
 
 [[menus.main]]
 name = 'Downloads'

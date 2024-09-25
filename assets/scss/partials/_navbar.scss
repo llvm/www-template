@@ -112,6 +112,11 @@
 
   &__item {
     list-style-type: none;
+    position: relative;
+
+    &--has-mega-menu:hover .navbar__mega-menu {
+      display: flex;
+    }
   }
 
   &__link {
@@ -135,6 +140,53 @@
 
     &:hover {
       color: var(--text1);
+    }
+  }
+
+  &__submenu {
+    // for transition
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease-in-out;
+
+    position: absolute;
+    background-color: var(--surface2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--text2);
+    border-radius: 0.25rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+    right: 0;
+
+    &-item {
+      padding: 0.5rem 1rem;
+      border-bottom: 1px solid var(--text2);
+      text-wrap: nowrap;
+    }
+
+    &-link {
+      color: var(--text2);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--text1);
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &:hover .navbar__submenu {
+      // for transition
+      visibility: visible;
+      opacity: 1;
+      pointer-events: all;
+      max-height: 500px;
     }
   }
 }

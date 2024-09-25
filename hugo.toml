@@ -47,8 +47,6 @@ weight = 50
     url = "https://releases.llvm.org"
     type = "secondary"
 
-  logo_path = "./static/images/logo.png"
-
   # only first 4 links will be displayed
   [[params.hero_section_links]]
     title = "Latest Release"

@@ -3,3 +3,110 @@
 @import "_global.scss";
 @import "_typography.scss";
 @import "partials";
+
+// TODO: break down into partials for singles page
+// TODO: Add this before the partials import
+main {
+  min-height: 80vh;
+  max-width: 1000px;
+  padding: 1rem;
+  margin: auto;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.875rem;
+    // color: var(--);
+  }
+
+  h1 {
+    font-weight: 800;
+    margin-top: 0;
+    color: var(--brand);
+  }
+
+  ul,
+  ol {
+    list-style: circle;
+    padding-left: 1rem;
+  }
+
+  code {
+    background-color: var(--surface2);
+    color: var(--brand);
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+  }
+
+  pre {
+    color: var(--brand);
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+
+    code {
+      background-color: transparent;
+    }
+  }
+}
+
+// main {
+//   h1,
+//   h2,
+//   h3,
+//   h4,
+//   h5,
+//   h6 {
+//     background: #d4d4d4;
+//     border-top: 1px solid gray;
+//     border-bottom: 1px solid gray;
+//     font-weight: normal;
+//     padding-left: 2px;
+//     padding-right: 2px;
+//   }
+//   blockquote {
+//     background: #e6f2e6;
+//     border-left: 3px solid #408040;
+//     font-style: italic;
+//     padding-left: 5px;
+//     margin-left: 2px;
+//   }
+//   pre {
+//     background: #e0f0ff;
+//     border-left: 5px solid #55aaff;
+//     padding: 5px;
+//     margin-left: 2px;
+//   }
+//   code {
+//     background: #e0f0ff;
+//     font-family: JetBrains Mono NL, Courier New, Monospaced;
+//     font-size: 0.9em;
+//   }
+//   table {
+//     border-spacing: 0px;
+//     border-right: 1px solid gray;
+//     border-bottom: 1px solid gray;
+//   }
+//   th,
+//   td {
+//     border-left: 1px solid gray;
+//     border-top: 1px solid gray;
+//   }
+//   th {
+//     background: #d4d4d4;
+//     font-weight: 600;
+//   }
+//   ul {
+//     margin-left-ltr: 20px;
+//     margin-right-rtl: 20px;
+//   }
+//   ol {
+//     margin-left-ltr: 25px;
+//     margin-right-rtl: 25px;
+//   }
+// }

@@ -71,7 +71,7 @@
       bottom: 0;
       padding: 1.5rem;
       transform: translateX(100%);
-      transition: transform 0.5s ease-in-out;
+      transition: transform var(--transition-time) ease-in-out;
     }
 
     &.active {
@@ -149,7 +149,7 @@
     opacity: 0;
     max-height: 0;
     pointer-events: none;
-    transition: opacity 0.25s ease-in-out;
+    transition: opacity var(--transition-time) ease-in-out;
 
     position: absolute;
     background-color: var(--surface2);

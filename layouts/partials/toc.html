@@ -1,0 +1,20 @@
+<div class="toc">
+  <button class="toc__toggle" id="tocToggle">
+    Table of Contents
+    <i class="toc__arrow ri-arrow-right-s-line"></i>
+  </button>
+  <div class="toc__content" id="tocContent">{{ .TableOfContents }}</div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const tocToggle = document.getElementById("tocToggle");
+    const tocContent = document.getElementById("tocContent");
+    const tocArrow = document.querySelector(".toc__arrow");
+
+    tocToggle.addEventListener("click", function () {
+      tocContent.classList.toggle("toc__content--active");
+      tocArrow.classList.toggle("toc__arrow--active");
+    });
+  });
+</script>

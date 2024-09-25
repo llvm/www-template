@@ -1,8 +1,7 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
-  {{ range .Pages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
-  {{ end }}
-{{ end }}
+<h1 class="list__title">{{ .Title }}</h1>
+
+{{if .Params.toc }} {{ partial "toc.html" . }} {{ end }} {{ .Content }} {{ range
+.Pages }}
+<h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+{{ .Summary }} {{ end }} {{ end }}

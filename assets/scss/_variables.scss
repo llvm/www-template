@@ -12,6 +12,8 @@
   --surface1-dark: #161212;
   --surface2-dark: #272424;
   --shadow1-dark: rgba(255, 255, 255, 0.1);
+
+  --transition-time: 0.25s;
 }
 
 :root {
@@ -28,6 +30,10 @@
   --shadow1: var(--shadow1-light);
   //   --surface-shadow: var(--surface-shadow-light);
   //   --shadow-strength: var(--shadow-strength-light);
+
+  // Apply transition to all properties
+  transition: background-color var(--transition-time) ease-in,
+    color var(--transition-time) ease-in;
 }
 
 @media (prefers-color-scheme: dark) {

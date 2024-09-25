@@ -115,6 +115,7 @@
   margin-top: 0;
   margin-bottom: 0;
   padding: 0.25rem 0;
+  line-height: 1.5;
 
   @media (max-width: 768px) {
     padding: 1rem;
@@ -275,7 +276,7 @@
       font-size: 3rem;
       color: var(--text2);
       opacity: 0.75;
-      transition: all 0.3s ease;
+      transition: all var(--transition-time) ease;
 
       &:hover {
         color: var(--text1);

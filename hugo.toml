@@ -83,3 +83,10 @@ weight = 50
     title = "Explore subprojects"
     icon = "ri-projector-line"
     url = "/"
+
+# Table of contents config
+
+[markup]
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4

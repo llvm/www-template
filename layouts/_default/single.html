@@ -6,6 +6,7 @@
   $dateHuman := .Date | time.Format ":date_long" }}
   <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
 
-  {{ .Content }} {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+  {{if .Params.toc }} {{ partial "toc.html" . }} {{ end }} {{ .Content }} {{
+  partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 </article>
 {{ end }}

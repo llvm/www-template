@@ -9,14 +9,15 @@
 /* Basic styling for markdown elements */
 
 /* General text styles */
-// body {
-//   line-height: 1.6;
-// }
+body {
+  line-height: 1.6;
+}
 
 main {
   min-height: 80vh;
   max-width: 1024px;
   margin: 0 auto;
+  padding: 0 1rem;
   /* Headings */
   h1,
   h2,

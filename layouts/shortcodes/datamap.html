@@ -1,0 +1,64 @@
+{{- $dataFile := index .Params 0 -}}
+{{- $dataList := index .Params 1 -}}
+{{- $fields := slice -}}
+{{- $customTemplates := dict -}}
+{{- range $index, $param := .Params -}}
+  {{- if ge $index 2 -}}
+    {{- if in $param ":" -}}
+      {{- $fieldParts := split $param ":" -}}
+      {{- $fieldName := index $fieldParts 0 -}}
+      {{- $fieldTemplate := index $fieldParts 1 -}}
+      {{- $fields = $fields | append $fieldName -}}
+      {{- $customTemplates = $customTemplates | merge (dict $fieldName $fieldTemplate) -}}
+    {{- else -}}
+      {{- $fields = $fields | append $param -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $data := index (index site.Data $dataFile) $dataList -}}
+
+{{- range $data -}}
+  <div class="data-item">
+    {{- $item := . -}}
+    {{- range $fields -}}
+      <div class="data-field">
+        {{- $fieldName := replace . "_" " " | title -}}
+        {{- $fieldValue := index $item . -}}
+        {{- if eq . "title" -}}
+          <h3>{{ $fieldValue }}</h3>
+        {{- else -}}
+          <strong>{{ $fieldName }}: </strong>
+          {{- with index $customTemplates . -}}
+            {{- $template := . -}}
+            {{- if reflect.IsSlice $fieldValue -}}
+              <ul>
+                {{- range $fieldValue -}}
+                  {{- $itemTemplate := $template -}}
+                  {{- range $key, $value := . -}}
+                    {{- $itemTemplate = replace $itemTemplate (printf "{%s}" $key) $value -}}
+                  {{- end -}}
+                  <li>{{ $itemTemplate | safeHTML }}</li>
+                {{- end -}}
+              </ul>
+            {{- else -}}
+              {{- $template = replace $template "{value}" $fieldValue -}}
+              {{- $template = replace $template "{name}" . -}}
+              {{- $template | safeHTML -}}
+            {{- end -}}
+          {{- else -}}
+            {{- if reflect.IsSlice $fieldValue -}}
+              <ul>
+                {{- range $fieldValue -}}
+                  <li>{{ . }}</li>
+                {{- end -}}
+              </ul>
+            {{- else -}}
+              {{ $fieldValue }}
+            {{- end -}}
+          {{- end -}}
+        {{- end -}}
+      </div>
+    {{- end -}}
+  </div>
+{{- end -}}

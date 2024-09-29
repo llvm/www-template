@@ -18,7 +18,11 @@ This is a Hugo theme for the LLVM Compiler Infrastructure project. It provides a
    ```toml
    theme = "www-template"
    ```
-3. Run your site locally with the theme:
+3. Install Post CSS CLI
+   ```sh
+   npm install postcss-cli 
+   ```
+4. Run your site locally with the theme:
    ```sh
    hugo server
    ```

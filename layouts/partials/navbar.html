@@ -2,9 +2,15 @@
   <span id="nav-label" hidden>Navigation</span>
   <div class="navbar__container">
     <a href="{{.Site.Home.Permalink}}">
-      <div class="navbar__logo">
-        <img src="{{ "images/logo.png" | relURL }}" alt="logo">
-      </div>
+      {{ if .Site.Params.navbar_logo }}
+        <div class="navbar__logo">
+          <img src="{{ .Site.Params.navbar_logo | relURL }}" alt="logo">
+        </div>
+      {{ else }}
+        <div class="navbar__logo">
+          <img src="{{ "images/logo.png" | relURL }}" alt="logo">
+        </div>
+      {{ end }}
     </a>
 
     <button

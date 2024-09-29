@@ -1,41 +1,19 @@
 <footer class="footer">
   <div class="container footer__container">
-  <div class="footer__title">
-    <h3>The LLVM Compiler Infrastructure</h3>
-  </div>
+    <div class="footer__title">
+      <h3>{{ .Site.Params.footer.title }}</h3>
+    </div>
     <div class="footer__col-wrapper">
-    <div class="footer__col">
-      <h4>LLVM</h4>
-      <ul>
-        <li><a href="#">Features</a></li>
-        <li><a href="#">Documentation</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Resources</a></li>
-        <li><a href="#">Download</a></li>
-      </ul>
-    </div>
-    <div class="footer__col">
-      <h4>Dev. Resources</h4>
-      <ul>
-        <li><a href="#">Doxygen</a></li>
-        <li><a href="#">Sources (GitHub)</a></li>
-        <li><a href="#">Code Review</a></li>
-        <li><a href="#">Bug Tracker</a></li>
-        <li><a href="#">Green Dragon</a></li>
-        <li><a href="#">LNT</a></li>
-        <li><a href="#">Scan Build</a></li>
-        <li><a href="#">llvm-cov</a></li>
-        <li><a href="#">Compile-time tracker</a></li>
-      </ul>
-    </div>
-    <div class="footer__col">
-      <h4>About LLVM</h4>
-      <ul>
-        <li><a href="#">LLVM Foundation</a></li>
-        <li><a href="#">LLVM Community Calendar</a></li>
-        <li><a href="#">Mailing LIsts</a></li>
-      </ul>
+      {{ range .Site.Params.footer.columns }}
+        <div class="footer__col">
+          <h4>{{ .title }}</h4>
+          <ul>
+            {{ range .links }}
+              <li><a href="{{ .url }}">{{ .text }}</a></li>
+            {{ end }}
+          </ul>
+        </div>
+      {{ end }}
     </div>
   </div>
 </footer>

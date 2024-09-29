@@ -90,3 +90,43 @@ weight = 50
   [markup.tableOfContents]
     startLevel = 2
     endLevel = 4
+
+# Footer config
+
+[params.footer]
+title = "The LLVM Compiler Infrastructure"
+
+[[params.footer.columns]]
+title = "LLVM"
+links = [
+  { text = "Features", url = "#" },
+  { text = "Documentation", url = "#" },
+  { text = "Blog", url = "#" },
+  { text = "FAQ", url = "#" },
+  { text = "Resources", url = "#" },
+  { text = "Download", url = "#" }
+]
+
+[[params.footer.columns]]
+title = "Dev. Resources"
+links = [
+  { text = "Doxygen", url = "#" },
+  { text = "Sources (GitHub)", url = "#" },
+  { text = "Code Review", url = "#" },
+  { text = "Bug Tracker", url = "#" },
+  { text = "Green Dragon", url = "#" },
+  { text = "LNT", url = "#" },
+  { text = "Scan Build", url = "#" },
+  { text = "llvm-cov", url = "#" },
+  { text = "Compile-time tracker", url = "#" }
+]
+
+[[params.footer.columns]]
+title = "About LLVM"
+links = [
+  { text = "Mission", url = "#" },
+  { text = "Community", url = "#" },
+  { text = "Events", url = "#" },
+  { text = "Sponsors", url = "#" },
+  { text = "Contact", url = "#" }
+]

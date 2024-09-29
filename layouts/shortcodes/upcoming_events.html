@@ -1,0 +1,14 @@
+{{ $events := .Site.Data.upcoming_events.upcoming_events }}
+<section class="">
+    <h2 id="upcoming_events">Upcoming events</h2>
+    <ul>
+    {{ range $events }}
+    <li>
+        <a href="{{ .url }}">
+        {{ .start_date | dateFormat "January 2" }}-{{ .end_date | dateFormat
+        "2, 2006" }} - {{ .name }}
+        </a>
+    </li>
+    {{ end }}
+    </ul>
+</section>

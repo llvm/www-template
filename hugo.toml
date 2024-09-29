@@ -2,6 +2,8 @@ baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'The LLVM Compiler Infrastructure'
 
+[markup.goldmark.renderer] 
+  unsafe= true
 
 # Navigation Bar Menu
 [[menus.main]]
@@ -75,9 +77,9 @@ weight = 50
     icon = "ri-hashtag"
     url = "/"
   [[params.hero_section_links]]
-    title = "Get Started"
+    title = "Upcoming Events"
     icon = "ri-play-large-line"
-    url = "/"
+    url = "#upcoming_events"
   [[params.hero_section_links]]
     title = "Read the Docs"
     icon = "ri-book-open-line"

@@ -1,0 +1,9 @@
+{{ $resources := .Site.Data.developer_resources.developer_resources }}
+<section class="">
+    <h2 id="developer_resources">Developer Resources</h2>
+    <ul>
+        {{ range $resources }}
+            <li><a href="{{ .url }}">{{ .name }}</a></li>
+        {{ end }}
+    </ul>
+</section>

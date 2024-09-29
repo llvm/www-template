@@ -41,35 +41,9 @@
     </div>
   </section>
 
-  <section class="section-container">
-    <h2>What is LLVM?</h2>
-    <p>
-      LLVM began as a research project at the University of Illinois, with the
-      goal of providing a modern, SSA-based compilation strategy capable of
-      supporting both static and dynamic compilation of arbitrary programming
-      languages. Since then, LLVM has grown to be an umbrella project consisting
-      of a number of subprojects, many of which are being used in production by
-      a wide variety of commercial and open source projects as well as being
-      widely used in academic research. Code in the LLVM project is licensed
-      under the "Apache 2.0 License with LLVM exceptions"
-    </p>
-  </section>
+  {{ .Content }}
 
-  {{ $subprojects := .Site.Data.subprojects.subprojects }}
-  <section class="section-container">
-    <h2>Sub Projects</h2>
-    <div class="sub-projects-wrapper">
-      {{ range $subprojects}}
-      <div class="sub-project">
-        <h4 class="sub-project__title">{{ .name }}</h4>
-        <p class="sub-project__description">{{ .description }}</p>
-        <a class="sub-project__button" href="{{ .url }}">Learn More</a>
-      </div>
-      {{ end }}
-    </div>
-  </section>
-
-  <section class="section-container getting-involved">
+  {{/*  <section class="section-container getting-involved">
     <h2>Getting Involved</h2>
     <div class="getting-involved__wrapper">
       <p style="margin-top: 0">
@@ -95,35 +69,8 @@
         </a>
       </div>
     </div>
-  </section>
+  </section>  */}}
 
-  <div class="home__row section-container">
-    {{ $resources := .Site.Data.developer_resources.developer_resources }}
-
-    <section class="">
-      <h2>Developer Resources</h2>
-      <ul>
-        {{ range $resources }}
-        <li><a href="{{ .url }}">{{ .name }}</a></li>
-        {{ end }}
-      </ul>
-    </section>
-    {{ $events := .Site.Data.upcoming_events.upcoming_events }}
-
-    <section class="">
-      <h2>Upcoming events</h2>
-      <ul>
-        {{ range $events }}
-        <li>
-          <a href="{{ .url }}">
-            {{ .start_date | dateFormat "January 2" }}-{{ .end_date | dateFormat
-            "2, 2006" }} - {{ .name }}
-          </a>
-        </li>
-        {{ end }}
-      </ul>
-    </section>
-  </div>
 </div>
 
 {{ end }}

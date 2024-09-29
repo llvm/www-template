@@ -26,7 +26,7 @@
         {{- $fieldName := replace . "_" " " | title -}}
         {{- $fieldValue := index $item . -}}
         {{- if eq . "title" -}}
-          <h3>{{ $fieldValue }}</h3>
+          <h3>{{ $fieldValue | markdownify | safeHTML }}</h3>
         {{- else -}}
           <strong>{{ $fieldName }}: </strong>
           {{- with index $customTemplates . -}}
@@ -42,7 +42,7 @@
                 {{- end -}}
               </ul>
             {{- else -}}
-              {{- $template = replace $template "{value}" $fieldValue -}}
+              {{- $template = replace $template "{value}" ($fieldValue | markdownify | safeHTML) -}}
               {{- $template = replace $template "{name}" . -}}
               {{- $template | safeHTML -}}
             {{- end -}}
@@ -50,11 +50,19 @@
             {{- if reflect.IsSlice $fieldValue -}}
               <ul>
                 {{- range $fieldValue -}}
-                  <li>{{ . }}</li>
+                  {{- if reflect.IsMap . -}}
+                    <li>
+                      {{- range $key, $value := . -}}
+                        <strong>{{ $key }}:</strong> {{ $value | markdownify | safeHTML }}
+                      {{- end -}}
+                    </li>
+                  {{- else -}}
+                    <li>{{ . | markdownify | safeHTML }}</li>
+                  {{- end -}}
                 {{- end -}}
               </ul>
             {{- else -}}
-              {{ $fieldValue }}
+              {{ $fieldValue | markdownify | safeHTML }}
             {{- end -}}
           {{- end -}}
         {{- end -}}

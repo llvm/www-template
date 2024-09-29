@@ -1,4 +1,4 @@
-# Theme Name
+# www template
 
 This is a Hugo theme for the LLVM Compiler Infrastructure project. It provides a clean and modern design for the LLVM website.
 
@@ -93,3 +93,43 @@ The params.hero_section_links section defines the links displayed in the hero se
   - `title`: The title of the link.
   - `icon`: The icon for the link.
   - `url`: The URL for the link.
+
+## Creating New Pages
+
+To create new pages, use the following command:
+
+```sh
+hugo new <page-name>/_index.md
+```
+
+For example, to create a new page named `about`, run the following command:
+
+```sh
+hugo new about/_index.md
+```
+
+## Using YAML Data Files
+
+The theme supports YAML data files for defining content. To use YAML data files, create a new file in the `data` directory, refer to the other data files for the structure.
+
+Then use the `datamap.html` shortcode.
+
+### Usage of `datamap.html` Shortcode
+
+```markdown
+{{< datamap 
+    "data_file_name" "data_array" 
+    "title" 
+    "description" 
+    "expected_result" 
+>}}
+```
+
+- `data_file_name`: The name of the data file.
+- `data_array`: The name of the array in the data file.
+- `title`: The title of the data item.
+- other fields: The fields of the data item.
+
+
+
+

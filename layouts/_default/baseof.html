@@ -13,6 +13,11 @@
 
     {{ partial "navbar.html" . }}
 
+
+    {{ if .Site.Params.banner.visible }}
+      {{ partial "banner.html" . }}
+    {{ end }}
+
     <main>{{ block "main" . }}{{ end }}</main>
 
     {{ partial "footer.html" . }}

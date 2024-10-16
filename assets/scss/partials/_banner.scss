@@ -1,0 +1,24 @@
+.banner {
+  background-color: var(--surface2);
+  border-bottom: 1px solid var(--text2);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    color: var(--text1);
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  &__button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--brand);
+    border: none;
+    color: var(--text1-inverse);
+    border-radius: 5px;
+    text-decoration: none;
+  }
+}

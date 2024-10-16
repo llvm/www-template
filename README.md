@@ -108,6 +108,12 @@ weight = 50
   navbar_logo = "images/logo.png"
   subtitle = 'The LLVM Project is a collection of modular and reusable compiler and toolchain technologies. Despite its name, LLVM has little to do with traditional virtual machines. The name "LLVM" itself is not an acronym; it is the full name of the project.  '
 
+  [params.banner]
+    visible = false
+    description = "Feedback for this website"
+    button_text = "Feedback Form"
+    url = "https://docs.google.com/forms/d/1irmZ1vSHtYUqTFQIUqBxl2rjbW4mpaRdzrpBxsqxrsE/"
+
   [[params.hero_section_buttons]]
     title = "Get Started"
     url = "/get-started"
@@ -194,6 +200,11 @@ links = [
 - `params.logo`: The logo for the site.
 - `params.navbar_logo`: The logo for the navbar.
 - `params.subtitle`: The subtitle for the site.
+- `params.banner`: The banner configuration.
+  - `visible`: true or false, whether the banner is visible.
+  - `description`: The description for the banner.
+  - `button_text`: The text for the button in the banner.
+  - `url`: The URL for the button in the banner.
 - `params.hero_section_buttons`: The buttons displayed in the hero section.
   - `title`: The title of the button.
   - `url`: The URL for the button.

@@ -1,6 +1,14 @@
 <div class="banner">
   <div class="banner__container">
-    <span class="banner__description">{{ .Site.Params.banner.description }}</span>
-    <a class="banner__button" href="{{ .Site.Params.banner.url }}" target="_blank">{{ .Site.Params.banner.button_text }}</a>
+    <span class="banner__description"
+      >{{ .Site.Params.banner.description }}</span
+    >
+    <span class="banner__buttons-container">
+      {{ range .Site.Params.banner.buttons }}
+        <a class="banner__button" href="{{ .url }}" target="_blank"
+          >{{ .text }}</a
+        >
+      {{ end }}
+    </span>
   </div>
 </div>

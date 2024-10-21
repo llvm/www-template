@@ -107,12 +107,18 @@ weight = 50
   logo = "images/logo.png"
   navbar_logo = "images/logo.png"
   subtitle = 'The LLVM Project is a collection of modular and reusable compiler and toolchain technologies. Despite its name, LLVM has little to do with traditional virtual machines. The name "LLVM" itself is not an acronym; it is the full name of the project.  '
+  no_robots = true
 
   [params.banner]
     visible = false
     description = "Feedback for this website"
-    button_text = "Feedback Form"
-    url = "https://docs.google.com/forms/d/1irmZ1vSHtYUqTFQIUqBxl2rjbW4mpaRdzrpBxsqxrsE/"
+    [[params.banner.buttons]]
+      text = "Feedback Form"
+      url = "https://docs.google.com/forms/d/1irmZ1vSHtYUqTFQIUqBxl2rjbW4mpaRdzrpBxsqxrsE/"
+    [[params.banner.buttons]]
+      text = "Old Website"
+      url = "https://llvm.org"
+
 
   [[params.hero_section_buttons]]
     title = "Get Started"
@@ -188,6 +194,7 @@ links = [
   { text = "Contact", url = "#" }
 ]
 
+
 ```
 
 ### Configuration Options
@@ -203,8 +210,9 @@ links = [
 - `params.banner`: The banner configuration.
   - `visible`: true or false, whether the banner is visible.
   - `description`: The description for the banner.
-  - `button_text`: The text for the button in the banner.
-  - `url`: The URL for the button in the banner.
+  - `parqams.banner.buttons`:
+    - `text`: The text for the button in the banner.
+    - `url`: The URL for the button in the banner.
 - `params.hero_section_buttons`: The buttons displayed in the hero section.
   - `title`: The title of the button.
   - `url`: The URL for the button.

@@ -6,7 +6,12 @@
 
 // TODO: break down into partials for singles page
 // TODO: Add this before the partials import
+
 /* Basic styling for markdown elements */
+
+html {
+  scroll-behavior: smooth;
+}
 
 /* General text styles */
 body {

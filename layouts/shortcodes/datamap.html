@@ -26,7 +26,12 @@
         {{- $fieldName := replace . "_" " " | title -}}
         {{- $fieldValue := index $item . -}}
         {{- if eq . "title" -}}
-          <h3>{{ $fieldValue | markdownify | safeHTML }}</h3>
+
+          {{/*  for adding ids to headers  */}}
+          {{- $content := $fieldValue | plainify -}}
+          {{- $id := anchorize $content -}}
+          <h3 id="{{ $id }}" >{{ $fieldValue | markdownify | safeHTML }}</h3>
+
         {{- else -}}
           <strong>{{ $fieldName }}: </strong>
           {{- with index $customTemplates . -}}
